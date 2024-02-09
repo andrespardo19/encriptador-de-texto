@@ -1,0 +1,25 @@
+/* Declaracion de Variables */
+/* se deben tener en cuneta mas variables relacionadas al desarrollo del proyecto
+- Hcae rencriptador, pero tambien generador de contraseñas como plus */
+:root{
+    --color-fondo: #F3F5FC;
+    --color-texto: #495057;
+    --fuente-texto: "Inter";
+}
+
+/* Estilos Generales */
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+h1, h2, h3, h4, h5{
+
+}

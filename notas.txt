@@ -1,0 +1,60 @@
+Hola Andres, estas son las notas a tener en cuenta para el desarrollo del ejercicio.
+
+- Creacion de variables
+(Tener en cuenta la creacion de variables de los estilos que mas se usen)
+
+- Unidades de medida
+rem ==> El uso de rem puede ser usado como unidad de medida para que sea responsive
+px ==> Mas usado, pero es estatico
+% ==> Relativo al tamañp del elemento padre
+
+- Resetear CSS (cosas por hacer)
+*{
+    margin: 0;
+    pading: 0;
+    vertical-aling: baseline;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: blue;
+}
+
+p a{
+    display: inline;
+}
+
+img, video, iframe, picture, figure{
+    max-width: 100%;
+    display: block;
+}
+
+form, input, select, textarea, button, label{
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
