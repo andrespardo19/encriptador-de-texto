@@ -3,7 +3,11 @@
 - Hcae rencriptador, pero tambien generador de contraseñas como plus */
 :root{
     --color-fondo: #F3F5FC;
-    --color-texto: #495057;
+    --color-fondo-salida-texto: #FFF;
+    --color-texto-titulos: #343A40;
+    --color-texto-ingreso: #0A3871;
+    --color-texto-visualizacion: #495057;
+    --color-boton-desencriptar: #D8DFE8;
     --fuente-texto: "Inter";
 }
 
@@ -20,6 +24,145 @@ body{
     color: var(--color-texto);
 }
 
-h1, h2, h3, h4, h5{
+button{
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid var(--color-texto-ingreso);
+    font-size: 1.6rem;
+    line-height: 1.936rem;
+}
 
+/* Estilo Contenedor general */
+/* Logo */
+.logo__contenedor{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    top: 2.77%;
+    left: 3.9%;
+}
+
+/* COntenedor ingreso de texto */
+.ingreso-texto__contenedor{
+    position: absolute;
+    width: 52.777%;
+    height: 92.18%;
+    margin-right: 5.5%;
+    padding-left: 5.2%;
+    top: 3.9%;
+    left: 11.4%;
+}
+
+.texto-ingreso__contenedor{
+    position: absolute;
+    width: 85%;
+    height: 67%;
+    top: 12.5%;
+    border: none;
+    background-color: inherit;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    color: var(--color-texto-ingreso);
+    resize: none;
+}
+
+.texto-ingreso__contenedor:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.texto-ingreso__contenedor::placeholder{
+    color: var(--color-texto-ingreso);
+    opacity: 1;
+}
+
+/* Mensaje de advertencia */
+.mensaje-importante__contenedor{
+    position: absolute;
+    display: flex;
+    width: 36.41%;
+    height: 1.75%;
+    top: 83.1%;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botones (Encriptar/Desencriptar) */
+.botones{
+    width: 85%;
+    position: absolute;
+    display: flex;
+    gap: 24px;
+    top: 86.42%;
+}
+
+.encriptar__botones{
+    width: 50.85%;
+    background-color: var(--color-texto-ingreso);
+    color: var(--color-fondo-salida-texto);
+}
+
+.desencriptar__botones{
+    width: 50.85%;
+    background-color: var(--color-boton-desencriptar);
+    color: var(--color-texto-ingreso);
+}
+
+/* Contenedor de salida de texto */
+.salida-texto__contenedor{
+    position: absolute;
+    width: 27.77%;
+    height: 92.18%;;
+    top: 3.9%;
+    left: 69.44%;
+    background-color: var(--color-fondo-salida-texto);
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+/* Contenedor salida de texto (Sin texto) */
+.sin-texto__salida-texto{
+    position: absolute;
+    text-align: center;
+    top: 23.7%;
+    margin: 0 8%;
+    gap: 16px;
+}
+
+.titulo__salida-texto{
+    font-size: 2.4rem;
+    padding: 0;
+    color: var(--color-texto-titulos);
+}
+
+.texto-aviso__salida-texto{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--color-texto-visualizacion);
+}
+
+/* Este es el texto encriptado o desencriptado */
+
+/* Contenedor salida de texto (Con texto) */
+.texto-trabajado__salida-texto{
+    position: absolute;
+    height: 81%;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    text-align: left;
+    top: 3.13%;
+    margin: 0 8%;
+    color: var(--color-texto-visualizacion);
+    overflow: auto;
+}
+
+.boton__salida-texto{
+    position: absolute;
+    width: 84%;
+    top: 86.42%;
+    margin: 0 8%;
+    background-color: var(--color-fondo-salida-texto);
+    border: 1px solid var(--color-texto-ingreso);
+    color: var(--color-texto-ingreso);
 }
