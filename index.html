@@ -23,26 +23,26 @@
 
             <!-- Mensaje de advertencia -->
             <div class="mensaje-importante__contenedor">
-                <img class="img__mensaje-importante" src="img/signo-exclamacion.png" alt="Icono de exclamacion">
-                <p class="texto__mensaje-importante">Solo letras minúsculas y sin acentos</p>
+                <img id="img__mensaje-importante" src="img/signo-exclamacion.png" alt="Icono de exclamacion">
+                <p id="texto__mensaje-importante">Solo letras minúsculas, sin acentos u caracteres especiales</p>
             </div>
             <!-- Botones (Encriptar/Desencriptar) -->
             <div class="botones">
                 <button onclick="encriptacionTexto();" class="encriptar__botones" id="boton-encriptar">Encriptar</button>
-                <button class="desencriptar__botones">Desencriptar</button>
+                <button onclick="desencriptacionTexto();" class="desencriptar__botones">Desencriptar</button>
             </div>
         </div>
         <!-- Contenedor de salida de texto -->
-        <section class="salida-texto__contenedor">
+        <section class="salida-texto__contenedor" >
             <div class="sin-texto__salida-texto">
                 <img src="img/Muñeco.png" alt="Mujer observando diamante">
                 <h2 class="titulo__salida-texto">Ningún mensaje fue encontrado</h2>
                 <p class="texto-aviso__salida-texto">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
             <!-- Este es el texto encriptado o desencriptado -->
-            <div class="con-texto__salida-texto" hidden>
+            <div class="con-texto__salida-texto">
                 <div class="texto-trabajado__salida-texto">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis, culpa laudantium ducimus perferendis architecto, est commodi eveniet tenetur ratione odio deserunt. Reiciendis, autem eligendi, tempora earum iure libero neque sed fuga sunt expedita voluptatem quis dignissimos reprehenderit veritatis aspernatur ipsam dolore iste vel nemo, adipisci id eum ab sequi</p>
+                    <p></p>
                 </div>
                 <button class="boton__salida-texto">Copiar</button>
             </div>

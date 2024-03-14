@@ -9,6 +9,7 @@
     --color-texto-visualizacion: #495057;
     --color-boton-desencriptar: #D8DFE8;
     --fuente-texto: "Inter";
+    --transicion: background-color 0.5s;
 }
 
 /* Estilos Generales */
@@ -81,7 +82,7 @@ button{
 .mensaje-importante__contenedor{
     position: absolute;
     display: flex;
-    width: 36.41%;
+    width: 90%;
     height: 1.75%;
     top: 83.1%;
     align-items: center;
@@ -89,6 +90,8 @@ button{
 }
 
 /* Botones (Encriptar/Desencriptar) */
+
+/* Realizar animaciones para cuando el mouse pase sobre el boton OJo */
 .botones{
     width: 85%;
     position: absolute;
@@ -101,12 +104,24 @@ button{
     width: 50.85%;
     background-color: var(--color-texto-ingreso);
     color: var(--color-fondo-salida-texto);
+    transition: var(--transicion);
 }
 
 .desencriptar__botones{
     width: 50.85%;
     background-color: var(--color-boton-desencriptar);
     color: var(--color-texto-ingreso);
+    transition: var(--transicion);
+}
+
+.desencriptar__botones:hover{
+    background-color: var(--color-fondo);
+    transition: var(--transicion);
+}
+
+.encriptar__botones:hover{
+    background-color: var(--color-texto-titulos);
+    transition: var(--transicion);
 }
 
 /* Contenedor de salida de texto */
@@ -145,7 +160,13 @@ button{
 /* Este es el texto encriptado o desencriptado */
 
 /* Contenedor salida de texto (Con texto) */
+
+.con-texto__salida-texto{
+    display: none;
+}
+
 .texto-trabajado__salida-texto{
+    
     position: absolute;
     height: 81%;
     font-size: 2.4rem;
@@ -155,6 +176,7 @@ button{
     margin: 0 8%;
     color: var(--color-texto-visualizacion);
     overflow: auto;
+    
 }
 
 .boton__salida-texto{
@@ -165,4 +187,10 @@ button{
     background-color: var(--color-fondo-salida-texto);
     border: 1px solid var(--color-texto-ingreso);
     color: var(--color-texto-ingreso);
+}
+
+.boton__salida-texto:hover{
+    background-color: var(--color-texto-ingreso);
+    color: var(--color-fondo-salida-texto);
+    transition: var(--transicion);
 }
