@@ -153,13 +153,20 @@ button{
 /* Contenedor salida de texto (Sin texto) */
 .sin-texto__salida-texto{
     position: absolute;
+    width: 100%;
     text-align: center;
     top: 23.7%;
-    margin: 0 8%;
+    left: 50%;
+    transform: translateX(-50%);
     gap: 16px;
 }
 
+.sin-texto__salida-texto img{
+    margin: 0 auto;
+}
+
 .titulo__salida-texto{
+    margin-top: 5%;
     font-size: 2.4rem;
     padding: 0;
     color: var(--color-texto-titulos);
@@ -233,6 +240,11 @@ footer{
     .contenedor{
         margin-top: 10%;
     }
+
+    .logo__contenedor{
+        width: 75px;
+        height: 30px;
+    }
     
     .ingreso-texto__contenedor {
         display: block;
@@ -244,8 +256,8 @@ footer{
     }
 
     .texto-ingreso__contenedor{
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: 2rem;
+        line-height: 3rem;
     }
 
     .salida-texto__contenedor{
@@ -261,12 +273,22 @@ footer{
     .sin-texto__salida-texto{
         position: relative;
         margin: 5% auto;
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .titulo__salida-texto{
+        font-size: 2rem;
+        margin-bottom: 2%;
     }
     
     .salida-texto__contenedor img{
         display: none;
+    }
+
+    .texto-trabajado__salida-texto{
+        font-size: 2rem;
+        line-height: 3rem;
     }
 
     .boton__salida-texto{

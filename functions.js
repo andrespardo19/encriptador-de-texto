@@ -19,15 +19,11 @@ function validacionCaracteresEspeciales(texto) {
 
     if (expresionRegular.test(texto)) {
         textoMensajeAdvertencia.style.color = "red";
-        textoMensajeAdvertencia.style.fontSize = "1.5rem";
-        imagenAdvertencia.style.width = "2rem"
 
         return true
     }
     else {
         textoMensajeAdvertencia.style.color = "black";
-        textoMensajeAdvertencia.style.fontSize = "1rem";
-        imagenAdvertencia.style.width = "1rem"
 
         return false
     }
