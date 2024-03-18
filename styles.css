@@ -224,7 +224,7 @@ button{
 
 footer{
     position: absolute;
-    bottom: 1.5%;
+    bottom: 0.5%;
     left: 50%;
     transform: translateX(-50%);
     color: var(--color-texto-ingreso)
@@ -294,6 +294,7 @@ footer{
     .boton__salida-texto{
         position: relative;
         margin-top: 250px;
+        margin-bottom: 10px;
     }
 
 }

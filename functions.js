@@ -15,7 +15,6 @@ function validacionCaracteresEspeciales(texto) {
 
     var expresionRegular = /[^a-z0-9\s]/
     var textoMensajeAdvertencia = document.getElementById("texto__mensaje-importante");
-    var imagenAdvertencia = document.getElementById("img__mensaje-importante");
 
     if (expresionRegular.test(texto)) {
         textoMensajeAdvertencia.style.color = "red";
@@ -99,12 +98,13 @@ function desencriptacionTexto(texto, arrayLLaves, arrayVocales, validadorCatacte
 
 function mostrarTexto(texto) {
     document.querySelector('.con-texto__salida-texto').style.display = 'block';
+    document.getElementById("botonCopiarTexto").style.display = 'block';
 
     var textoTrabajado = document.getElementById("textoTrabajado");
 
     textoTrabajado.innerHTML = texto;
 
-    document.querySelector('.sin-texto__salida-texto').style.display = 'none'
+    document.querySelector('.sin-texto__salida-texto').style.display = 'none';
 }
 
 function encriptarTextoBoton() {
