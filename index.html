@@ -24,12 +24,12 @@
             <!-- Mensaje de advertencia -->
             <div class="mensaje-importante__contenedor">
                 <img id="img__mensaje-importante" src="img/signo-exclamacion.png" alt="Icono de exclamacion">
-                <p id="texto__mensaje-importante">Solo letras minúsculas, sin acentos u caracteres especiales</p>
+                <p id="texto__mensaje-importante">Solo letras minúsculas, sin acentos o caracteres especiales</p>
             </div>
             <!-- Botones (Encriptar/Desencriptar) -->
             <div class="botones">
-                <button onclick="encriptacionTexto();" class="encriptar__botones" id="boton-encriptar">Encriptar</button>
-                <button onclick="desencriptacionTexto();" class="desencriptar__botones">Desencriptar</button>
+                <button onclick="encriptarTextoBoton();" class="encriptar__botones">Encriptar</button>
+                <button onclick="desencriptarTextoBoton();" class="desencriptar__botones">Desencriptar</button>
             </div>
         </div>
         <!-- Contenedor de salida de texto -->
@@ -42,16 +42,20 @@
             <!-- Este es el texto encriptado o desencriptado -->
             <div class="con-texto__salida-texto">
                 <div class="texto-trabajado__salida-texto">
-                    <p></p>
+                    <p id="textoTrabajado"></p>
                 </div>
-                <button class="boton__salida-texto">Copiar</button>
+                <button onclick="copiarPortapapeles()" class="boton__salida-texto" id="botonCopiarTexto">Copiar</button>
             </div>
         </section>
 
-        <!-- Carga de JavaScript -->
-        <script src="functions.js"></script>
+        <footer>
+            <p>Hecho por Andres Pardo - 2024</p>
+        </footer>
 
     </div>
+
+    <!-- Carga de JavaScript -->
+    <script src="functions.js"></script>
 </body>
 
 </html>

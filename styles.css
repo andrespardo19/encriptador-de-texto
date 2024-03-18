@@ -10,6 +10,7 @@
     --color-boton-desencriptar: #D8DFE8;
     --fuente-texto: "Inter";
     --transicion: background-color 0.5s;
+    --transicion-rapida: background-color 0.1s;
 }
 
 /* Estilos Generales */
@@ -105,6 +106,7 @@ button{
     background-color: var(--color-texto-ingreso);
     color: var(--color-fondo-salida-texto);
     transition: var(--transicion);
+    cursor: pointer;
 }
 
 .desencriptar__botones{
@@ -112,6 +114,7 @@ button{
     background-color: var(--color-boton-desencriptar);
     color: var(--color-texto-ingreso);
     transition: var(--transicion);
+    cursor: pointer;
 }
 
 .desencriptar__botones:hover{
@@ -119,9 +122,20 @@ button{
     transition: var(--transicion);
 }
 
+.desencriptar__botones:active{
+    background-color: var(--color-boton-desencriptar);
+    transition: var(--transicion-rapida);
+}
+
 .encriptar__botones:hover{
-    background-color: var(--color-texto-titulos);
+    background-color: var(--color-fondo-salida-texto);
+    color: var(--color-texto-ingreso);
     transition: var(--transicion);
+}
+
+.encriptar__botones:active{
+    background-color: var(--color-boton-desencriptar);
+    transition: var(--transicion-rapida);
 }
 
 /* Contenedor de salida de texto */
@@ -166,7 +180,6 @@ button{
 }
 
 .texto-trabajado__salida-texto{
-    
     position: absolute;
     height: 81%;
     font-size: 2.4rem;
@@ -176,7 +189,7 @@ button{
     margin: 0 8%;
     color: var(--color-texto-visualizacion);
     overflow: auto;
-    
+    padding-top: 5%;
 }
 
 .boton__salida-texto{
@@ -187,10 +200,78 @@ button{
     background-color: var(--color-fondo-salida-texto);
     border: 1px solid var(--color-texto-ingreso);
     color: var(--color-texto-ingreso);
+    cursor: pointer;
 }
 
 .boton__salida-texto:hover{
     background-color: var(--color-texto-ingreso);
     color: var(--color-fondo-salida-texto);
     transition: var(--transicion);
+}
+
+.boton__salida-texto:active{
+    background-color: var(--color-boton-desencriptar);
+    color: var(---color-texto-ingreso);
+    transition: var(--transicion-rapida);
+}
+
+footer{
+    position: absolute;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-texto-ingreso)
+}
+/* Responsive Desing*/
+
+/* Tablet - Smartphone*/
+
+/* Para que los contenedores ingreso-texto__contenedor y salida-texto__contenedor estén alineados uno debajo del otro cuando la pantalla sea menor a 780px, puedes usar Media Queries en tu CSS. Aquí te muestro cómo hacerlo: */
+
+@media screen and (max-width: 780px) {
+
+    .contenedor{
+        margin-top: 10%;
+    }
+    
+    .ingreso-texto__contenedor {
+        display: block;
+        width: 90%; /* Ajusta el ancho al 90% */
+        height: auto;
+        min-height: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .texto-ingreso__contenedor{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .salida-texto__contenedor{
+        display: block;
+        width: 90%;
+        height: auto;
+        min-height: 35%;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sin-texto__salida-texto{
+        position: relative;
+        margin: 5% auto;
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    
+    .salida-texto__contenedor img{
+        display: none;
+    }
+
+    .boton__salida-texto{
+        position: relative;
+        margin-top: 250px;
+    }
+
 }
